@@ -5,7 +5,7 @@ import IssueStatusFliter from "./IssueStatusFliter";
 
 const IssueActions = () => {
   return (
-    <Flex mb="5" justify="between">
+    <Flex justify="between">
       <IssueStatusFliter />
       <Link href="/issues/new" legacyBehavior>
         <Button>New Issue</Button>
