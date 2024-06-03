@@ -15,11 +15,17 @@ export default async function Home() {
     where: { status: "CLOSED" },
   });
 
+  const box = {
+    open,
+    inProgress,
+    closed
+  }
+
   return (
     <Grid columns={{initial:'1',md:'2'}} gap='5'>
       <Flex direction='column' gap="5">
-        <IssueSummary open={open} inProgress={inProgress} closed={closed}/>
-        <IssueChart open={open} inProgress={inProgress} closed={closed}/>
+        <IssueSummary {...box}/>
+        <IssueChart {...box}/>
       </Flex>
       <LatestIssues/>
     </Grid>
